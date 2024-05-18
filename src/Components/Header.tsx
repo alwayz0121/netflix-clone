@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Nav = styled.div`
+const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -10,7 +10,7 @@ const Nav = styled.div`
   font-size: 14px;
   padding: 20px 60px;
   color: white;
-  background-color: salmon;
+  background-color: #000;
 `;
 
 const Col = styled.div`
@@ -22,6 +22,7 @@ const Logo = styled.svg`
   margin-right: 50px;
   width: 95px;
   height: 25px;
+  fill: ${(props) => props.theme.red};
   path {
     stroke-width: 6px;
     stroke: white;
@@ -35,6 +36,13 @@ const Items = styled.ul`
 
 const Item = styled.li`
   margin-right: 20px;
+`;
+
+const Search = styled.span`
+  color: #fff;
+  svg {
+    height: 25px;
+  }
 `;
 
 const Header = () => {
@@ -56,7 +64,19 @@ const Header = () => {
       </Col>
 
       <Col>
-        <button>Search</button>
+        <Search>
+          <svg
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fillRule="evenodd"
+              d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+              clipRule="evenodd"
+            ></path>
+          </svg>
+        </Search>
       </Col>
     </Nav>
   );
