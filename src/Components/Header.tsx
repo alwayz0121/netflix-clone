@@ -88,7 +88,7 @@ const SearchInput = styled(motion.input)`
   z-index: -1;
   color: white;
   font-size: 16px;
-  width: 220px;
+  width: 270px;
   background-color: transparent;
   border: 1px solid ${(props) => props.theme.white.lighter};
 `;
